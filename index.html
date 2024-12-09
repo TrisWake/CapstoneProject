@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>WakeUp And Go</title>
 </head>
 <body>
@@ -18,28 +19,20 @@
                     Where are we located?
                 </h2>
             </div>
-            <div class="row">
-                <label>Location</label>
-                <input id="location" />
-            </div>
-            <div class="row">
-                <label>Number of Days</label>
-                <input id="forecast" />
-            </div>
             <div>
-                <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="" srcset="">
+                <input type="text" id="location" placeholder="Enter location">
+                <input type="date" id="start-date">
+                <input type="date" id="end-date">
+                <button id="search">Get Weather</button>
             </div>
+            <div id="forecast-container"></div>
             <div>
-                <button id="toggleButton">Show Air Quality</button>
-            </div>
-            </div>
-            <div class="row">
-                <button id="search">
-                    Search
-                </button>
+                <img id="weather-image" src="" alt="Weather Image">
+                <div id="weather-info"></div>
             </div>
         </div>
 <script src="apiKey.js"></script>
 <script src="main.js"></script>
+<script src="weatherIcons.js"></script>
 </body>
 </html>
