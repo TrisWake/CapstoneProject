@@ -11,14 +11,32 @@ searchButton.addEventListener('click', ()=>{
         console.log(data)
         console.log(data.forecast.forecastday[0].day["avgtemp_f"])
         console.log(data.forecast.forecastday[1].day["avgtemp_f"])
+        console.log(data.forecast.forecastday[2].day["avgtemp_f"])
+        
+    let weatherAudio = document.querySelector('#weather-audio')
+            let audioSource = document.querySelector('#audio-source')
+            let songURL = ""
+            weatherAudio = `music.js${songs}`
+            audioSource.src = data.forecast.forecastday[0].day.condition.text
+            // console.log(songs)
+
+        //Info for Day 1
         let currentWeather = document.querySelector("#weather-info")
         currentWeather.innerText = data.forecast.forecastday[0].day["avgtemp_f"]
-        
-        
         let weatherImage = document.querySelector('#weather-image')
         let image = data.forecast.forecastday[0].day
+        audioSource = document.querySelector("#audio-source")
+        function playAudio(){
+            weatherAudio.play()
+        }
+        function pauseAudio(){
+            weatherAudio.pause()
+        }
         if(data.forecast.forecastday[0].day.condition.text = "sunny"){
-            weatherImage.src = sunny && 
+            weatherImage.src = sunny
+            weatherAudio = sunnySong
+            weatherAudio.play()
+            console.log(sunnySong)
         } 
         if(data.forecast.forecastday[0].day.condition.text = "cloudy"){
             weatherImage.src = cloudy
@@ -35,18 +53,60 @@ searchButton.addEventListener('click', ()=>{
         if(data.forecast.forecastday[0].day.condition.text = "clear"){
             weatherImage.src = clear
         } 
+    
+        // Info for Day 2
+        let currentWeather1 = document.querySelector("#weather-info1")
+        currentWeather1.innerText = data.forecast.forecastday[1].day["avgtemp_f"]
+        let weatherImage1 = document.querySelector('#weather-image1')
+        let image1 = data.forecast.forecastday[1].day
+        if(data.forecast.forecastday[1].day.condition.text = "sunny"){
+            weatherImage1.src = sunny 
+        } 
+        if(data.forecast.forecastday[1].day.condition.text = "cloudy"){
+            weatherImage1.src = cloudy
+        } 
+        if(data.forecast.forecastday[1].day.condition.text = "rain"){
+            weatherImage1.src = rain
+        } 
+        if(data.forecast.forecastday[1].day.condition.text = "mist"){
+            weatherImage1.src = mist
+        } 
+        if(data.forecast.forecastday[1].day.condition.text = "partly cloudy"){
+            weatherImage1.src = partlyCloudy
+        } 
+        if(data.forecast.forecastday[1].day.condition.text = "clear"){
+            weatherImage1.src = clear
+        } 
+        //Info for Day 3
+        let currentWeather2 = document.querySelector("#weather-info2")
+        currentWeather2.innerText = data.forecast.forecastday[2].day["avgtemp_f"]
+        let weatherImage2 = document.querySelector('#weather-image2')
+        let image2 = data.forecast.forecastday[2].day
+        if(data.forecast.forecastday[2].day.condition.text = "sunny"){
+            weatherImage2.src = sunny 
+        } 
+        if(data.forecast.forecastday[2].day.condition.text = "cloudy"){
+            weatherImage2.src = cloudy
+        } 
+        if(data.forecast.forecastday[2].day.condition.text = "rain"){
+            weatherImage2.src = rain
+        } 
+        if(data.forecast.forecastday[2].day.condition.text = "mist"){
+            weatherImage2.src = mist
+        } 
+        if(data.forecast.forecastday[2].day.condition.text = "partly cloudy"){
+            weatherImage2.src = partlyCloudy
+        } 
+        if(data.forecast.forecastday[2].day.condition.text = "clear"){
+            weatherImage2.src = clear
+        } 
     })
-
+})
     // const weatherInfo = document.querySelector('#weather-info')
     // if (weatherInfo) {
     //     weatherInfo.innerHTML = `Current weather: ${condition}, Temperature: ${temperature}°F`;
     // }
-    const weatherAudio = document.querySelector('#weather-audio')
-            const audioSource = document.querySelector('#audio-source')
-            audioSource.src = weatherSong
-            weatherAudio.load()
-            weatherAudio.play()
-})
+    
 
 
 //display current weather and forecast for dates

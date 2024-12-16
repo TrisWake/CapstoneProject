@@ -1,3 +1,29 @@
 body {
     background-color: lightskyblue;
+    flex-direction: column;
+
+}
+
+.weather-container{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+}
+
+.weather-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 200px;
+    width: 100%;
+}
+
+.weather-item img {
+    width: 100%;
+    height: auto;
+}
+
+.weather-item audio {
+    margin-top: 10px;
 }
