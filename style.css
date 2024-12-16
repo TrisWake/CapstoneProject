@@ -4,16 +4,11 @@ body {
 
 }
 
-.weather-container{
-    display: flex;
-    justify-content: space-evenly;
-    gap: 20px;
-    padding: 20px;
-}
-
 .weather-item {
+    justify-content: space-between;
+    border: 2px solid;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     max-width: 200px;
     width: 100%;
@@ -24,6 +19,3 @@ body {
     height: auto;
 }
 
-.weather-item audio {
-    margin-top: 10px;
-}

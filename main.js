@@ -18,7 +18,7 @@ searchButton.addEventListener('click', ()=>{
             let songURL = ""
             weatherAudio = `music.js${songs}`
             audioSource.src = data.forecast.forecastday[0].day.condition.text
-            // console.log(songs)
+            console.log(songs)
 
         //Info for Day 1
         let currentWeather = document.querySelector("#weather-info")
@@ -34,9 +34,9 @@ searchButton.addEventListener('click', ()=>{
         }
         if(data.forecast.forecastday[0].day.condition.text = "sunny"){
             weatherImage.src = sunny
-            weatherAudio = sunnySong
+            weatherAudio = new Audio("https://www.last.fm/music/Maze/_/Joy+and+Pain")
             weatherAudio.play()
-            console.log(sunnySong)
+            // console.log(sunnySong)
         } 
         if(data.forecast.forecastday[0].day.condition.text = "cloudy"){
             weatherImage.src = cloudy
@@ -52,6 +52,8 @@ searchButton.addEventListener('click', ()=>{
         } 
         if(data.forecast.forecastday[0].day.condition.text = "clear"){
             weatherImage.src = clear
+            weatherAudio = new Audio("https://www.pandora.com/artist/johnny-nash/i-can-see-clearly-now/i-can-see-clearly-now-edit/TR3xclm5x4bhbX9")
+            weatherAudio.play()
         } 
     
         // Info for Day 2
