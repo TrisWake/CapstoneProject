@@ -72,15 +72,17 @@ searchButton.addEventListener('click', ()=>{
         }
         else{ 
             weatherIcon = overcast
+            let song = new Audio('Audio/Hey Ya.mp3')
+            song.play()
         }
 
         if(weatherImage){
             weatherImage.src = weatherIcon
         }
         
-        if(audioSource){
-        audioSource.src = songLink
-        }
+        // if(audioSource){
+        // audioSource.src = songLink
+        // }
     
         if(weatherAudio){
             weatherAudio.play()
