@@ -1,10 +1,11 @@
 body {
     background-color: lightskyblue;
-    background-image: url('weather-background.jpg');
+    background-image: url('./Image/weather-background.jpg');
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(60, 60, 160);
+    color: aliceblue;
     text-shadow: white;
+    text-align: center;
 }
 
 .forecast{
@@ -22,9 +23,14 @@ body {
     min-width: 20%;
     border: 2px solid;
     border-radius: 10px;
-    background-color: beige;
+    background-image: url('./Image/stormy-nights.jpg');
     box-shadow: 0 4px 8px grey;
     transition: 0.3s ease;
+    height: 300px;
+    padding: 20px;
+    margin-top: 100px;
+    font-size: large;
+    font-weight: bold;
 }
 
 .weather-item:hover {
@@ -33,6 +39,29 @@ body {
 
 .weather-item img {
     width: 25%;
-    height: 100px;
+    height: 25%;
+    padding: 10px;
+    max-width: 100%;
+    min-width: 20%;
 }
 
+.weather-item audio {
+    max-width: 100%;
+    min-width: 20%;
+    height: 150px;
+}
+
+#location {
+    height: 50px;
+    font-size: large;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#search {
+    height: 50px;
+    font-size: large;
+    text-align: center;
+    background-color: burlywood;
+    color: aliceblue;
+}
