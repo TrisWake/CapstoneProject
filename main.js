@@ -61,9 +61,15 @@ searchButton.addEventListener('click', ()=>{
         if(weatherText.includes ('rain')){
             weatherIcon = rain
             audioFile = 'Audio/Rain SWV.mp3'
+        }else if(weatherText.includes ('Thunder')){
+            weatherIcon = thunder
+            audioFile = 'Audio/Nolia Clap.mp3'
         }else if(weatherText.includes ('Cloudy')){
             weatherIcon = cloudy
             audioFile = 'Audio/Supa Dupa Fly.mp3'
+        }else if(weatherText.includes ('snow')){
+                weatherIcon = snow
+                audioFile = 'Audio/Let It Snow.mp3'
         }else if(weatherText == 'Sunny'){
             weatherIcon = sunny
             audioFile = 'Audio/Hot_In_Herre.mp3'
