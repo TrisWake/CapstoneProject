@@ -53,7 +53,7 @@ searchButton.addEventListener('click', ()=>{
         //Setting the images and audios to the weather conditions
         if(weatherText.includes ('rain')){
         weatherIcon = rain
-        audioFile = 'Audio/Raining Men.mp3'
+        audioFile = 'Audio/Rain SWV.mp3'
         }else if(weatherText.includes ('Cloudy')){
         weatherIcon = cloudy
         audioFile = 'Audio/Supa Dupa Fly.mp3'
@@ -65,7 +65,7 @@ searchButton.addEventListener('click', ()=>{
             audioFile = 'Audio/Hot_In_Herre.mp3'
         }else if(weatherText == 'Mist'){
             weatherIcon = mist
-            audioFile = 'Audio/Rain SWV.mp3'
+            audioFile = 'Audio/Raining Men.mp3'
         }else if(weatherText == 'Clear'){
             weatherIcon = clear
             audioFile = 'Audio/Brighter_Day.mp3'
